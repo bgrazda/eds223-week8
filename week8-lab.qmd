@@ -132,10 +132,14 @@ sites_cleaned <- sites_annotated |>
 
 ```
 ```{r}
-ggplot(sites_cleaned, aes(x = date, y = NDVI, group = veg_type, col = veg_type)) +
+ggplot(sites_cleaned, aes(x = date, y = NDVI, col = veg_type)) +
   geom_line() +
   geom_point() +
-  theme_bw()
+  theme_bw() +
+  labs(x = "", 
+       y = "Normalized Difference Vegetation Index (NDVI)", 
+       col = "Vegetation type",
+       title = "Seasonal cycles of vegetation productivity") 
 ```
 
 
